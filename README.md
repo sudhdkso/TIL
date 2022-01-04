@@ -10,4 +10,4 @@
 
 # spring
 - ### security
-  - <h4><a href='https://github.com/sudhdkso/GDSC-TIL-study/blob/j1yun/Spring/Security/Oauth2.md'>oauth2의 정의와 인증및 인가과정</a></h4>
+  - <h4><a href='https://github.com/sudhdkso/TIL/blob/main/Spring/Oauth2.md'>oauth2의 정의와 인증및 인가과정</a></h4>
