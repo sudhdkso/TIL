@@ -10,7 +10,7 @@
 2. 동의항목 설정
     - 로그인을 사용할 경우 카카오에서 받아올 User정보를 동의항목에서 설정 가능
     <center>
-    <img  width=300px src= "images\kakaoAgreement.png">
+    <img  width=500px src= "images\kakaoAgreement.png">
     </center>
 
 3. Redirect URI 등록
@@ -19,7 +19,7 @@
     - 서비스는 Redirect URI로 받은 로그인 인증 정보를 처리해 다음 단계 요청을 보냄
     - Redirect URI가 앱 설정에 등록되어 있지 않으면 카카오 로그인 시 에러가 발생
     <center>
-    <img  width=300px src= "images\kakaoRedirectURI.png">
+    <img  width=500px src= "images\kakaoRedirectURI.png">
     </center>
     
 
