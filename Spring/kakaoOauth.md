@@ -5,7 +5,7 @@
 ### ■ 카카오 소셜로그인
 
 1. 앱 키 발행
-    - 카카오소셜로그인은 `KaKaoDeveloper`에 가입한 후 앱을 만들어 `앱 키`를 발행받아야지 사용 가능
+    - 카카오소셜로그인은 `KaKaoDevelopers`에 가입한 후 앱을 만들어 `앱 키`를 발행받아야지 사용 가능
 
 2. 동의항목 설정
     - 로그인을 사용할 경우 카카오에서 받아올 User정보를 동의항목에서 설정 가능
@@ -78,4 +78,4 @@
 ### 참고
 <hr>
 
-[kakaodeveloper-카카오로그인](https://developers.kakao.com/docs/latest/ko/kakaologin/prerequisite#redirect-uri)
+[kakaodevelopers-카카오로그인](https://developers.kakao.com/docs/latest/ko/kakaologin/prerequisite#redirect-uri)
