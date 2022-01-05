@@ -74,3 +74,8 @@
                             client-secret: "test"
     ```
 
+
+### 참고
+<hr>
+
+[kakaodeveloper-카카오로그인](https://developers.kakao.com/docs/latest/ko/kakaologin/prerequisite#redirect-uri)
