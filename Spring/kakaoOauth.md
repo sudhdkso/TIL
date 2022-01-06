@@ -18,9 +18,7 @@
     -  카카오 서버는 Redirect URI로 서비스에서 필요한 로그인 인증 정보를 보냄
     - 서비스는 Redirect URI로 받은 로그인 인증 정보를 처리해 다음 단계 요청을 보냄
     - Redirect URI가 앱 설정에 등록되어 있지 않으면 카카오 로그인 시 에러가 발생
-    <center>
-    <img  width=500px src= "images\kakaoRedirectURI.png">
-    </center>
+    <img  align= center width=500px src= "images\kakaoRedirectURI.png">
     
 
 
@@ -74,7 +72,34 @@
                             client-secret: "test"
     ```
 
+### ***2022.01.06 TIL***
 
+3. 카카오 소셜 로그인 
+
+    <img src= 'images\loginError.png' width=500px>
+    
+    - 카카오 소셜 로그인 접근 시 위 사진과 같은 에러 발생
+
+    <br></br>
+    <img src= 'images\kakaoLoginErrorCode.png' width=500px>
+    - 카카오의 앱 설정 동의항목과 Spring에서 요구하는 항목이 다를 경우에 발생하는 에러 코드
+
+    - 카카오에서 전달하는 동의항목 변수의 이름과 Spring에서 사용하는 변수의 이름이 달라도 발생
+
+    > profile -> profile_nickname으로 변경
+
+4. https Error
+
+    ```java
+    Error parsing HTTP request header 
+    ```
+    Redirect URI를 설정해주었는데 위와같은 에러가 발생
+
+    > 해결방법은  https:// -> http:// 로 변경
+
+
+
+    
 ### 참고
 <hr>
 
