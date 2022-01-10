@@ -72,6 +72,26 @@
 
 5. 프론트엔드에서는 새로 받은 RefreshToken을 cookie에 저장
 
+## **2022/01/10 TIL**
+
+- 예제 5-9의 UserTokenSercice클래스는 UserInfoTokenService를 상속받는 클래스
+
+- UserInfoTokenService클래스는 스프링 시큐리티 OAuth2에서 제공하는 클래스인데 1.5에는 존재하고 2.0에는 존재하지 않음
+
+- UserInfoTokenService클래스는 User의 정보를 얻어오기 위해 소셜 서버와 통신하는 역할을 수행하는데 이때 URI와 clientId정보가 필요
+
+    - 이때 URI는 userInfoUri로 사용자의 개인정보 조회를 위한 URI
+    - clientId는 OAuth클라이언트 사용자명으로 OAuth공급자가 클라이언트를 식별하는 데 사용하는 Id
+
+
+- loginController는 인증된 User의 정보를 불러오는 기능을 가지고 있습니다.
+
+- loginController에서는 인증이 성공적으로 처리된 이후에 URI를 리다이렉트해주면 로그인한 유저의 값을 세션에 저장
+
+- SecurityContextHolder에서 인증된 정보를 OAuth2Autentication형태로 받아옴, OAuth2Autentication은 기본적인 인증에 대한 정보뿐만 아니라 OAuth2인증과 관련된 정보도 함께 제공
+
+
+
 
 
 ### **참고**
