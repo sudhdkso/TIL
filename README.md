@@ -16,6 +16,5 @@
 
   - <h4><a href='https://github.com/sudhdkso/TIL/blob/main/Spring/kakaoOauth.md'>스프링 카카오 소셜로그인</a></h4>
 
-# java
-  - <h4><a href='https://github.com/sudhdkso/TIL/blob/main/Java/JavaBigInteger.md'>Java Biginteger</a></h4>
+
 
