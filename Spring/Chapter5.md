@@ -70,4 +70,24 @@ public class LoginController {
 
 - SecurityContextHolder에서 인증된 정보를 OAuth2Autentication형태로 받아옴, OAuth2Autentication은 기본적인 인증에 대한 정보뿐만 아니라 OAuth2인증과 관련된 정보도 함께 제공
 
-- 위의 컨트롤러는 각각의 소셜별로 인증받은 User를 처리하는 로직이 다르기 때문에 소셜별로 로직을 추가해줘야함
+### **2022.01.14 TIL**
+- 위의 코드는 두가지 문제점이 존재
+    1. 불필요한 로직이 늘어남
+
+    2. 위의 컨트롤러는 각각의 소셜별로 인증받은 User를 처리하는 로직이 다르기 때문에 소셜별로 로직을 추가해줘야함
+
+- 위 문제점을 해결할 방법: AOP이용 
+    - AOP: AOP는 Aspect Oriented Programming의 약자로 관점 지향 프로그래밍, 관점 지향은 쉽게 말해 어떤 로직을 기준으로 핵심적인 관점, 부가적인 관점으로 나누어서 보고 그 관점을 기준으로 각각 모듈화하겠다는 것
+
+    - 파라미터로 AOP를 구현하는 방법
+        1. 직접 AOP 로직을 작성하는 방법
+        2. HandlerMethodArgumentResolver를 사용
+
+        - 책에서는 2번 방법 사용
+    - HandlerMethodArgumentResolver 인터페이스는 전략패턴의 일종, 컨트롤러 메소드에서 특정 조건에 해댱한느 파라미터가 있으면 생성한 로직을 처리한 후 해당 파라미터에 바인딩해주는 전략 인터페이스
+    
+
+
+
+
+출처: https://engkimbs.tistory.com/746
