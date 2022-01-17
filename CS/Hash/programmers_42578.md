@@ -48,6 +48,5 @@ int solution(vector<vector<string>> clothes) {
 4. 옷을 무조건 하나는 착용해야 하므로 모두 안쓰는 경우를 뺀  answer-1을 return    
 
 
-→ 완주자 목록에 없는 참가자를 찾아는 방법
 ### 출처
 https://programmers.co.kr/learn/courses/30/lessons/42578
