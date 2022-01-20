@@ -24,7 +24,7 @@ int solution(vector<vector<string>> clothes) {
 
     for (int i = 0; i < clothes.size(); i++) {
         if (hash.find(clothes[i][1]) == hash.end()) {
-            hash.insert({ clothes[i][1],1});
+            hash.insert({clothes[i][1],1});
             clo.push_back(clothes[i][1]);
         }
 
