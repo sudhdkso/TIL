@@ -17,10 +17,70 @@
 
 ### ***Solution***
 
+#### **Stack클래스이용**
 ```c++
 #include <string>
 #include <vector>
-#include<iostream>
+#include<stack>
+using namespace std;
+
+vector<int> solution(vector<int> progresses, vector<int> speeds) {
+	vector<int> answer = { 1 };
+	int time = (99 - progresses[0]) / speeds[0] + 1, count = 0;
+	stack<int> s;
+	s.push(time);
+	for (int i = 1; i < progresses.size(); i++) {
+		time = (99 - progresses[i]) / speeds[i] + 1;
+		if (s.top() < time) {
+			s.push(time);
+			answer.push_back(0);
+			answer[++count]++;
+		}
+		else answer[count]++;
+	}
+
+	return answer;
+}
+```
+#### **Queue클래스이용**
+```c++
+#include <string>
+#include <vector>
+#include<queue>
+using namespace std;
+
+vector<int> solution(vector<int> progresses, vector<int> speeds) {
+	vector<int> answer = { 1 };
+	int time = (99 - progresses[0]) / speeds[0] + 1, count = 0;
+	queue<int> q;
+	q.push(time);
+	for (int i = 1; i < progresses.size(); i++) {
+		time = (99 - progresses[i]) / speeds[i] + 1;
+		if (q.front() < time) {
+
+			while (!q.empty())
+				q.pop();
+
+			q.push(time);
+
+			answer.push_back(0);
+			answer[++count]++;
+		}
+
+		else {
+			q.push(time);
+			answer[count]++;
+		}
+	}
+
+	return answer;
+}
+```
+
+#### **Vector클래스이용**
+```c++
+#include <string>
+#include <vector>
 using namespace std;
 
 vector<int> solution(vector<int> progresses, vector<int> speeds) {
