@@ -26,7 +26,48 @@
 ### ***Solution***
 
 ```c++
+#include <string>
+#include <vector>
+#include<queue>
+#include<iostream>
+#include<algorithm>
+using namespace std;
 
+int solution(vector<int> priorities, int location) {
+	int answer = 0, index = location;
+	queue<int> q;
+	vector<int> v = priorities;
+	for (int i = 0; i < priorities.size(); i++)
+		q.push(priorities[i]);
+
+	sort(v.begin(), v.end(), greater<>());
+
+	while (v.size() > 0) {
+		if (q.front() < v[0]) {
+			q.push(q.front());
+			q.pop();
+			if (index <= 0)
+				index = q.size() - 1;
+			else
+				index--;
+
+		}
+		else {
+			v.erase(v.begin());
+			q.pop();
+			index--;
+			if (index < 0) {
+				return priorities.size() - q.size();
+			}
+
+
+		}
+
+	}
+
+	return answer;
+}
 ```
 
 ### 출처
+https://programmers.co.kr/learn/courses/30/lessons/42587
