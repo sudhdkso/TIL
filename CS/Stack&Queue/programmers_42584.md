@@ -20,33 +20,23 @@ using namespace std;
 
 vector<int> solution(vector<int> prices) {
     vector<int> answer;
-    queue<int> q;
-    int count=0;
-    while (answer.size() < prices.size()) {
-        count = 0;
-        for (int i = answer.size(); i < prices.size(); i++) {
-            count++;
-            if(q.empty())
-                q.push(prices[i]);
-            else if (q.front() <= prices[i]) {
-                q.push(prices[i]);
-            }
-            else {
-                break;
-            }
+    queue<int>q;
+    int count=0,size=prices.size(),front=0,index=0;
 
-            //cout << q.back() << " ";
-        }
-        answer.push_back(count-1);
-
-        while (!q.empty())
-            q.pop();
-        cout << endl;
-
-    }
-   
+    for (int i = 0; i < size; i++)q.push(prices[i]);
     
-
+    while (!q.empty()) {
+        front = q.front();
+        count = 0; 
+        for (int i = answer.size()+1; i < size; i++) {
+            count++;
+            if (prices[i] < front) break;
+           
+        }
+        q.pop();
+        answer.push_back(count);
+    }
+    
     
     return answer;
 }
