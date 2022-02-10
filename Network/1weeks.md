@@ -1,4 +1,4 @@
-# ***2022.01.07 TIL***
+# ***2022.01.07 TIL,02.08 ~02.09 TIL***
 ## ***01. what is the Internet?***
 
 >Internet= inter- + net(work)
@@ -87,3 +87,52 @@
 
 - Optical fiber (광섬유)
     - 빠른 속도, 낮은 에러
+
+
+<br>
+
+ ## ***03. Network Core***
+ ### ■ **Network Core**
+ - 라우터들의 연결이 촘촘한 상태 
+ - **packet-switching**
+    1. 이 라우터는 들어온 패켓의 단위를 보고
+    2. 목적지에 따라 데이터의 방향을 결정
+    3. 그 데이터가 그 방향으로 갈 수 있도록 스위칭해주는 역할
+
+ ### ■ **Switching Mecahanisms**
+ 1. **Circuit Switching**
+    - source 에서 destination까지 가는 경로, 즉 자원을 예약하여 사용하는 방식
+    - 전체 데이터는 물처럼 길을 따라 이동
+2. **Packet Switching**
+    - 전체 데이터를 페켓단위로 쪼갬
+    - 쪼갠 데이터 각각을 destination으로 전달
+    - 각 패킷이 독립적으로 처리
+
+ ### ■ **Circuit Switching**
+ - 채널 할당 방법: FDM,TDM
+    1. FDM: 주파수 쪼갬
+        - 자원의 양을 쪼개서 서비스
+        - 연속된 시간으로 데이터 전송
+        - ex) 비디오
+    2. TDM: 시간 쪼개기
+        - 짧은 시간동안 많은 양의 데이터를 한번에 전송
+        - ex) 웹 서비스
+
+ ### ■ **Packet Switching**
+ - Store-and-forwad
+    1. 전체 데이터를 페켓단위로 쪼갬
+    2. source에서 패켓들을 라우터로 전송
+    3. 들어온 데이터를 라우터에 저장(store)
+        - destination으로 전송하는 중간에 데이터가 손실날 수 있는데 이때 재전송 시켜주는 역할을 하기 위해서 중간 라우터에 저장
+    4. 저장한 데이터를 다시 destination으로 전송(forwarding)
+
+ ### ■ **Switching 비교**
+- **Packet Switching**
+    - 더 많은 사용자가 네트워크를 사용
+    - 자원 공유
+    - 함께
+
+- **Circuit Switching**
+    - 몇몇 호출에 대한 높은 서비스 품질을 보장합니다. 
+    - 자원 예약
+    - 경쟁
