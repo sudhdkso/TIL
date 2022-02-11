@@ -91,7 +91,7 @@
 
 <br>
 
- ## ***03. Network Core***
+ ##  ***03. Network Core***
  ### ■ **Network Core**
  - 라우터들의 연결이 촘촘한 상태 
  - **packet-switching**
