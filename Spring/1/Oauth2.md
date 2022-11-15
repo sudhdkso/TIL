@@ -19,7 +19,7 @@
 ### ■ **Oauth2 전체 시퀀스 다이어그램**
 <br/>
 <p align="middle" >
-  <img width="400px;" src=".\images\oauth2.jpg"/>
+  <img width="400px;" src="..\images\oauth2.jpg"/>
 </p>
 <br/>
 

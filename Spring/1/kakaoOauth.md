@@ -10,7 +10,7 @@
 2. 동의항목 설정
     - 로그인을 사용할 경우 카카오에서 받아올 User정보를 동의항목에서 설정 가능
     <center>
-    <img  width=500px src= "images\kakaoAgreement.png">
+    <img  width=500px src= "..\images\kakaoAgreement.png">
     </center>
 
 3. Redirect URI 등록
@@ -76,12 +76,12 @@
 
 3. 카카오 소셜 로그인 
 
-    <img src= 'images\loginError.png' width=500px>
+    <img src= '../images/loginError.png' width=500px>
     
     - 카카오 소셜 로그인 접근 시 위 사진과 같은 에러 발생
 
     <br></br>
-    <img src= 'images\kakaoLoginErrorCode.png' width=500px>
+    <img src= '..\images\kakaoLoginErrorCode.png' width=500px>
     - 카카오의 앱 설정 동의항목과 Spring에서 요구하는 항목이 다를 경우에 발생하는 에러 코드
 
     - 카카오에서 전달하는 동의항목 변수의 이름과 Spring에서 사용하는 변수의 이름이 달라도 발생
