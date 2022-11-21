@@ -86,7 +86,7 @@ class Solution {
 
         return answer;
     }
-    //균형 잡힌 괄호
+    //올바른 괄호인지 확인하는 함수
     public static boolean check(String p){
         Stack<String> stack = new Stack<>();
         for(int i=0;i<p.length();i++){
@@ -103,6 +103,17 @@ class Solution {
     }
 }
 ```
+- left( **(** )괄호와 right( **)** )괄호의 개수가 같으면 균형잡힌 괄호로 볼 수 있다.
+- u가 올바른 괄호일 때
 
+    1. u를 그대로 answer에 붙인다.
+    2. u가 올바른 괄호이면 v에 대한 재귀적인 호출 수행한다.
+- u가 올바른 괄호가 아닐때
+
+    1. left괄호를 붙인다.
+    2. v에 대한 재귀적인 호출을 수행한다.
+    3. right괄호를 붙인다.
+    4. u의 괄호를 모두 반대로 붙인다.
+        - 단, u의 첫 번째와 마지막 문자를 제거해야하므로 반복문을 1 부터 u의 길이-1 만큼 반복한다.
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/60058
