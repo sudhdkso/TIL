@@ -36,5 +36,6 @@ public class Solution {
 ```
 - 순간이동은 현재 위치*2만큼 이동할 수 있기에 남은 거리가 절반씩 감소한다고 생각할 수 있습니다.
 - 남은거리를 절반으로 나눈 값의 **나머지**가 홀수이면 순간이동으로는 이동할 수 없기 때문에 배터리가 1 소모 됩니다. 
+
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/12980
