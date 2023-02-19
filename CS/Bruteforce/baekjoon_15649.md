@@ -64,4 +64,4 @@ public class Main {
 - count가 m과 같아지면 순열을 이루는 숫자들를 모두 찾을 것이기 때문에 StringBuilder타입의 sb에 append해줍니다.
 
 ### 출처
-https://www.acmicpc.net/problem/5568
+https://www.acmicpc.net/problem/15649
