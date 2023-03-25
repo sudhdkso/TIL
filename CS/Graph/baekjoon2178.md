@@ -1,4 +1,4 @@
-### 문자열 집합
+## **문자열 집합**
 
 
 #### ***problem***
@@ -122,7 +122,7 @@ public class Main {
 
 - bfs를 사용한 미로찾기 문제이다.
 - distance[i][j]에는 (0,0) ~ (i,j)까지의 거리를 담고 있다.
-- visited[i][j]에는 (i,j)의 방문 여부를 boolean타입으로 저장합니다.
+- visited[i][j]에는 (i,j)의 방문 여부를 boolean타입으로 저장한다.
 
 ### 출처
 https://www.acmicpc.net/problem/2178
