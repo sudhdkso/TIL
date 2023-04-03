@@ -101,7 +101,12 @@ class Solution {
     }
 }
 ```
--  
+-  문자열로 들어온 무인도 지도의 정보를 int형으로 변경하여 arr이라는 int형 이차원 배열에 저장한다.
+    - X인 경우는 -1, 그리고 나머지 값은 그냥 int로 변환한다.
+- visited는 boolean타입의 2차원 배열로 (i,j)의 방문 여부를 체크한다.
+- list는 각 섬에서 몇일씩 머무르는지를 저장하는 ArrayList이다.
+- bfs를 통해서 상,하,좌,우로 연결되어 있는 섬의 숙박 일수를 모두 더하여 반환한 값을 list에 추가한다.
+- 그리고 모든 방문 가능한 섬을 확인 한 후 list의 값을 오름차순으로 정렬 한다.
 
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/87946
