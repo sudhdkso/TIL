@@ -27,21 +27,21 @@ class Solution {
         int length = dungeons.length;
         boolean[] visited = new boolean[length];
         
-        dfs(k, 0, 0, dungeons, visited);
+        dfs(k,0, dungeons, visited);
 
         Collections.sort(arrayList, Collections.reverseOrder());
 
         return arrayList.get(0);
     }
 
-    public static void dfs(int k, int index, int count, int[][] dungeons, boolean[] visited){
+    public static void dfs(int k, int count, int[][] dungeons, boolean[] visited){
 
         int length = dungeons.length;
 
         for(int i=0; i<length;i++){
             if(!visited[i] && k >= dungeons[i][0]){
                 visited[i] = true;
-                dfs(k-dungeons[i][1], index+1, count+1, dungeons, visited);
+                dfs(k-dungeons[i][1], count+1, dungeons, visited);
                 visited[i] = false;
             }
         }
@@ -49,7 +49,16 @@ class Solution {
     }
 }
 ```
--  
+- visited는 던전 i에 방문 여부를 저장하는 boolean타입의 일차원 배열이다.
+- dfs는 k, count, 던전 배열, visited 배열을 매개변수로 받는 함수이다.
+    - k는 문제에서 주어지는 현재 피로도(남은 피로도)이다.
+    - count는 방문한 던전의 개수이다.
+    - dungeons는 문제에서 주어지는 던전들에 관한 정보를 담고 있는 2차원 배열이다.
+    - visited는 던전 i에 방문 여부를 저장하는 boolean타입의 일차원 배열이다.
+- dfs 함수내에서 모든 던전을 방문하며 방문 가능한 경우의 방문한 던전의 갯수를 arrayList에 넣는다.
+    - 던전을 방문하는 경우는 현재 던전을 방문하지 않으며, 현재 피로도가 던전의 필요 피로도보다 크거나 같을 때 해당 던전을 방문할 수 있다.
+    - 해당 던전을 방문한 경우 visited[i]를 true로 하고, 남은 피로도로 다시 재귀 호출한다.
+- 모든 경우에 대해서 dfs한 후 arrayList를 내림차순으로 정렬하여 가장 첫번째에 있는 count가 최대로 방문 가능한 던전의 개수이다.
 
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/87946
