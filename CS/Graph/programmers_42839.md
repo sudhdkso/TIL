@@ -18,12 +18,7 @@ class Solution {
     public static ArrayList<Integer> primeList = new ArrayList<>();
     public static int count = 0;
     public static int solution(String numbers) {
-        int answer = 0;
-        int length = numbers.length();
-        String[] slist = new String[length];
-        for(int i=0;i<length;i++){
-            slist[i] = numbers.substring(i,i+1);
-        }
+        int answer = 0;      
         go("", numbers);
         return count;
     }
