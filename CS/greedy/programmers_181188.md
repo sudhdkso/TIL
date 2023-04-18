@@ -1,4 +1,4 @@
-## **광물 캐기**
+## **요격 시스템**
 
 
 #### ***problem***
@@ -39,8 +39,8 @@ class Solution {
 }
 ```
 - targets 배열을 좌표 범위 e에 대해서 오름차순으로 정렬한다.
-- 문제에서 (s,e)개구간에 대해서 targets[i-1][1]이 targets[i][0] 보다 작으면 새로운 요격 미사일이 필요합니다.
-    - 이때 end에는 targets[i][1]을 저장합니다.
+- 문제에서 (s,e)개구간에 대해서 targets[i-1][1]이 targets[i][0] 보다 작으면 새로운 요격 미사일이 필요하다.
+    - 이때 end에는 targets[i][1]을 저장한다.
 
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/181188
