@@ -48,7 +48,13 @@ class Solution {
     }
 }
 ```
--  
+-  isPrime은 입력받은 숫자가 소수인지 판별하는 함수이다.
+- primeList는 소수들을 저장하는 ArrayList이다.
+- go는 numbers로 구성할 수 있는 모든 조합을 재귀함수로 탐색한다.
+    - 이때 s1은 소수인지 판별할 string, s2는 그 s1에 추가한 숫자를 제외한 문자열이다.
+    - s1이 소수이면서 primeList에 없는 숫자를 primeList에 넣어주며 count를 증가시킨다.
+- 모든 탐색이 끝나면 count를 return해준다. 
+
 
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/42839?language=java
