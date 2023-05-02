@@ -1,4 +1,4 @@
-## **멀리 뛰기**
+## **N-Quuen**
 
 
 ### ***problem***
@@ -48,6 +48,8 @@ class Solution {
 }
 ```
 
+- n-queen은 대표적인 백트래킹 문제이다.
+- queen을 한자리씩 놓으면서 그다음 queen이 놓일 자리고 있으면 queen을 놓고, 놓을 자리가 없으면 return해준다.
 
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/12952
