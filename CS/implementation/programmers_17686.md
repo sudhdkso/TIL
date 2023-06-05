@@ -101,7 +101,7 @@ class Solution {
 - File은 file에 대한 정보를 head,number,tail로 가지고 있는 클래스이다.
 - fileSplit()는 입력받은 String file이름을 head,number,tail로 구분한 값으로 File을 생성하여 반환하는 함수이다.
 - Arrays.sort를 활용한다.
-    - Arrays.sort의 comparator를 문제의 정렬방식에 맞게 재정의하여 바로 file을 정렬한다.
+    - Arrays.sort의 compareTo()함수를 문제의 정렬방식에 맞게 재정의하여 바로 file을 정렬한다.
         1. fileSplit를 통해서 o1, o2를 각각 File클래스로 만든다.
         2. 만들어진 File클래스를 각각 file1,file2라고 지칭한다.
         3. file1의 head와 file2의 head를 String의 compareTo()함수를 활용하여 비교한다.
@@ -111,7 +111,7 @@ class Solution {
             - number를 비교할 때는 number의 값을 Integer로 변환하여 비교한다.
         
 
-- 처음에는 Arrays.sort()함수를 활용하는 것이 아니라 priority queue를 활용하여 문제를 풀었다. 하지만 comparator를 동일하게 구현 하였는데, head와 number가 같을 때의 입력 순서가 보장이 되지 않았다.
+- 처음에는 Arrays.sort()함수를 활용하는 것이 아니라 priority queue를 활용하여 문제를 풀었다. 하지만 compareTo()함수를 동일하게 재정의 하였는데, head와 number가 같을 때의 입력 순서가 보장이 되지 않았다.
 - 그래서 comparator를 구현하면서 정렬가능한 Arrays.sort()를 사용하였다.
 ### 출처
 https://school.programmers.co.kr/learn/courses/30/lessons/17686#
