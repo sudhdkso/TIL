@@ -74,7 +74,7 @@ public class Main {
 
 }
 ```
-- [숨바꼭질3]([CS\Graph\baekjoon13549.md](https://github.com/sudhdkso/TIL/blob/main/CS/Graph/baekjoon13549.md))번 문제와 거의 똑같은 문제이다.
+- [숨바꼭질3](https://github.com/sudhdkso/TIL/blob/main/CS/Graph/baekjoon13549.md)번 문제와 거의 똑같은 문제이다.
 - 다만 bfs를 통해 K에 도착했을 때 min값이 같으면 count를 추가하고, 최솟값이 변경될 때는 count를 초기화해줘야한다.
 
 ### 출처
