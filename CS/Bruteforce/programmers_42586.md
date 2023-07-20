@@ -35,7 +35,11 @@ class Solution {
 }
 ```
 ### **문제 풀이** 
-
+- 앞의 기능이 완수되지 않으면, 기능이 개발이 완료되어도 배포할 수 가 없다.
+- progresses[i]의 개발이 완료되는 날짜를 day라고 하면, progresses[i+1]부터 day날짜에 기능 개발이 완료되었는지 확인한다.
+- 그러면 day날에 개발이 완료되어 배포할 수 있는 기능의 갯수가 arr[day]에 저장된다.
+- 이런식으로 확인을 하다가 다시 day날에 기능이 완료되지 않은 progresses[i]가 있다면, progreeses[i]의 기능이 완료되는 날을 구한다.
+- 위의 행동을 모든 기능 개발이 완료될때까지 반복한다.
 
 ### **[출처]**
 https://school.programmers.co.kr/learn/courses/30/lessons/42586?language=java
