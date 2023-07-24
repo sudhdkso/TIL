@@ -1,4 +1,4 @@
-## **택배상자**
+## **프로세스**
 
 
 ### ***problem***
@@ -63,6 +63,46 @@ class Solution {
     }
 }
 ```
+#### 클래스 없이 단순 큐만 사용한 풀이
+> 클래스를 사용하지 않을 때는 location의 위치를 계속 옮겨야한다는 불편함이 존재했다. 
+<br/>하지만 list를 통해서 큐에 한번에 원소들을 순서대로 넣을 수 있었기 때문에, 각각의 방법은 장단점이 존재한다고 생각한다. 
+
+``` java
+import java.util.*;
+import java.util.stream.*;
+class Solution {
+    public int solution(int[] priorities, int location) {
+        int answer = 0;
+        List<Integer> list = Arrays.stream(priorities).boxed().collect(Collectors.toList());
+        
+        Queue<Integer> q = new LinkedList<>(list);
+        
+        list.sort(Collections.reverseOrder());
+        
+        int len = priorities.length;
+
+        while(!q.isEmpty()){
+            
+            if(q.peek() == list.get(0)){
+                answer++;
+                q.poll();
+                list.remove(0);
+                
+                if(location == 0){
+                    break;
+                }
+            }
+            else{
+                q.offer(q.poll());
+            }
+            location = location-1 < 0 ? q.size()-1 : location-1;
+        }
+        
+        
+        return answer;
+    }
+}
+```
 - Printer라는 class는 각 프린터의 index와 priority를 가지고 있다.
 - Priorities를 List에 넣어서 내림차순으로 정렬한다.
     - 가장 큰 Priority가 맨 앞에 오도록한다.
@@ -72,5 +112,5 @@ class Solution {
         - 이때 Queue의 맨 앞에 있는 프린터의 index가 location과 같으면 break한다.
             - 원하는 순번이기 때문
     
-### 출처
+### **[출처]**
 https://school.programmers.co.kr/learn/courses/30/lessons/42587
