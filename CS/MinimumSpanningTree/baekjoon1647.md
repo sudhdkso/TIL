@@ -111,4 +111,4 @@ public class Main {
 - 이 문제도 프림 알고리즘과 크루스칼 알고리즘을 모두 사용할 수 있지만, 속도 측면에서 크루스칼 알고리즘이 프림 알고리즘을 사용하는 것 보다 좀 더 빠를 것이라고 생각된다.
 
 ### **[출처]**
-https://www.acmicpc.net/problem/1922
+https://www.acmicpc.net/problem/1647
