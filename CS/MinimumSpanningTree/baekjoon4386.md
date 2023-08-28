@@ -18,6 +18,7 @@
 첫째 줄에 정답을 출력한다. 절대/상대 오차는 10-2까지 허용한다.
 
 ### ***Solution***
+#### 프림 알고리즘
 ``` java
 import java.io.*;
 import java.util.Arrays;
@@ -105,7 +106,102 @@ public class Main {
     }
 }
 ```
+#### 크루스칼 알고리즘
+``` java
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    private static class Edge implements Comparable<Edge>{
+        int nodeA;
+        int nodeB;
+        double cost;
+
+        public Edge(int nodeA, int nodeB, double cost){
+            this.nodeA = nodeA;
+            this.nodeB = nodeB;
+            this.cost = cost;
+        }
+
+        @Override
+        public int compareTo(Edge e){
+            return Double.compare(this.cost, e.cost);
+        }
+    }
+    private static ArrayList<Edge> edges = new ArrayList<>();
+    private static double INF = Double.MAX_VALUE;
+    public static int[] parent = new int[1001];
+
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        int N = Integer.parseInt(br.readLine());
+
+
+        double[][] star = new double[N][2];
+        for(int i=0;i<N;i++){
+            StringTokenizer st = new StringTokenizer(br.readLine()," ");
+            star[i][0] = Double.parseDouble(st.nextToken());
+            star[i][1] = Double.parseDouble(st.nextToken());
+        }
+
+        for (int i = 0; i < N; i++) {
+            parent[i] = i;
+        }
+
+        for(int i=0;i<N;i++){
+            for(int j=i+1;j<N;j++){
+                double dx = Math.pow(star[i][0]-star[j][0],2);
+                double dy = Math.pow(star[i][1]-star[j][1],2);
+                edges.add(new Edge(i,j,Math.sqrt(dx+dy)));
+            }
+        }
+
+        Collections.sort(edges);
+
+        double min = 0.0;
+        for(Edge e : edges){
+            double cost = e.cost;
+            int a = e.nodeA;
+            int b = e.nodeB;
+            if(findParent(a) != findParent(b)){
+                union(a,b);
+                min += cost;
+            }
+        }
+
+        bw.write(String.format("%.2f", min));
+        bw.flush();
+
+    }
+
+    private static int findParent(int x){
+        if(x == parent[x]){
+            return x;
+        }
+        return parent[x] = findParent(parent[x]);
+    }
+
+    private static void union(int a, int b){
+        a = findParent(a);
+        b = findParent(b);
+
+        if(a < b){
+            parent[b] = a;
+        }
+        else{
+            parent[a] = b;
+        }
+    }
+
+}
+```
 ### **문제 풀이**
+- 모든 별을 이어 별자리를 만드는 최소비용을 구하는 문제이므로 MST로 정답을 구할 수 있다.
+
+- MST문제에서는 보통 각 노드간의 거리들이 주어지는데, 이 문제에서는 별들의 x,y좌표만 주어진다. 이때 주어지는 별들의 위치를 기반으로, 각각 별들간의 직선 거리를 구하여 각 별들간의 거리(비용)를 arr이차원배열에 저장을 한다.
+
+- 그리고 arr에 대해서크루스칼 알고리즘 또는 프림 알고리즘을 통해서 MST를 구하면 된다.
 
 
 ### **[출처]**
