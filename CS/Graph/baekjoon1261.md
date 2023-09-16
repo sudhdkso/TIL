@@ -65,6 +65,7 @@ public class Main {
         PriorityQueue<Node> pq = new PriorityQueue<>();
         int[][] dist = new int[n][m];
         boolean[][] visited = new boolean[n][m];
+        
         for(int i=0;i<n;i++){
             Arrays.fill(dist[i],INF);
         }
